@@ -31,6 +31,7 @@ jobs:
           echo "5a4ba15ef8d115537a8889c80681d8fbc37381a2e4a76b24e6a5945766f7cce6  $archive" | sha256sum -c -
           unzip -q "$archive" -d "$archive_dir"
           cp -a "$archive_dir/resistivity-elastic-ambiguity-1.0.0/outputs" .
+          cp -a "$archive_dir/resistivity-elastic-ambiguity-1.0.0/manuscript_figures" .
       - name: Install package and test dependencies
         run: python -m pip install --upgrade pip && python -m pip install -e ".[reports,dev]"
       - name: Run unit and reproducibility tests
@@ -57,6 +58,7 @@ jobs:
           echo "5a4ba15ef8d115537a8889c80681d8fbc37381a2e4a76b24e6a5945766f7cce6  $archive" | sha256sum -c -
           unzip -q "$archive" -d "$archive_dir"
           cp -a "$archive_dir/resistivity-elastic-ambiguity-1.0.0/outputs" .
+          cp -a "$archive_dir/resistivity-elastic-ambiguity-1.0.0/manuscript_figures" .
       - name: Install package
         run: python -m pip install --upgrade pip && python -m pip install -e .
       - name: Regenerate manuscript figures from frozen tables
