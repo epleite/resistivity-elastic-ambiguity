@@ -3,7 +3,8 @@ message: "Please cite the archived software release and the associated paper."
 title: "When does resistivity resolve elastic ambiguity? Reproducibility archive"
 type: software
 version: 1.0.0
-date-released: 2026-09-18
+date-released: 2026-09-19
+doi: 10.5281/zenodo.22844387
 authors:
   - family-names: Leite
     given-names: Emilson Pereira
@@ -11,7 +12,7 @@ authors:
     affiliation: "Department of Geology and Natural Resources, Institute of Geosciences, University of Campinas (UNICAMP), Rua Carlos Gomes 250, 13083–855 Campinas, SP, Brazil"
     email: "emilson@unicamp.br"
 repository-code: "https://github.com/epleite/resistivity-elastic-ambiguity"
-url: "https://github.com/epleite/resistivity-elastic-ambiguity"
+url: "https://doi.org/10.5281/zenodo.22844387"
 license: MIT
 abstract: >-
   Code, frozen synthetic results, publication-figure generation, and the Oman

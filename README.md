@@ -1,5 +1,7 @@
 # When does resistivity resolve elastic ambiguity?
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22844387.svg)](https://doi.org/10.5281/zenodo.22844387)
+
 Reproducibility repository for:
 
 **Emilson Pereira Leite**, “When does resistivity resolve elastic ambiguity? Testing partially coupled rock-physics inversion under model error”.
@@ -30,7 +32,7 @@ The source workbook is openly available from the Hiroshima University Institutio
 
 ## Citation and licence
 
-Citation metadata are provided in `CITATION.cff`. The software is released under the MIT License. The archival DOI will be added here after the Zenodo deposit is published.
+Citation metadata are provided in `CITATION.cff`. The software is released under the MIT License. The archived v1.0.0 release is available at [https://doi.org/10.5281/zenodo.22844387](https://doi.org/10.5281/zenodo.22844387).
 
 ## Author
 
