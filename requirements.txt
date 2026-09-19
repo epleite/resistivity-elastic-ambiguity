@@ -1,0 +1,12 @@
+# Direct dependencies for a complete local installation. Version bounds mirror
+# pyproject.toml while protecting the released workflow from future major-API
+# changes. Install the package itself afterward with: pip install -e . --no-deps
+numpy>=1.24,<3
+scipy>=1.10,<2
+pandas>=2.0,<3
+openpyxl>=3.1,<4
+matplotlib>=3.7,<4
+pillow>=10,<13
+reportlab>=4.0,<5
+pypdf>=4.0,<7
+pytest>=8.0,<9

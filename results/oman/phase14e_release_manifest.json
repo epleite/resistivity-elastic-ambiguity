@@ -1,0 +1,29 @@
+{
+  "release_id": "phase14e_oman_external_transfer_v1",
+  "date_utc": "2026-08-30",
+  "decision": "E_NO_TRANSFER_GO",
+  "evidence_boundary": "frozen_protocol_and_aggregate_result; source measurements not redistributed",
+  "files": [
+    {
+      "path": "data/oman/provenance/PHASE14E_PROTOCOL.md",
+      "sha256": "68bae6eceb0f15ae9507413724bc09bfea7c3b814f20646559c83b4b33fd1e84"
+    },
+    {
+      "path": "data/oman/provenance/phase14e_protocol_lock.json",
+      "sha256": "b81974b761b65a982221af8347f9deef0365ec47308a32ba6f5045b9a41a9b4d"
+    },
+    {
+      "path": "data/oman/provenance/PHASE14E_REPORT.md",
+      "sha256": "2843cd2144b485869e9e733c56022f13435ce4578ec4f08fde5ed338f85beb46"
+    },
+    {
+      "path": "results/oman/phase14e_result.json",
+      "sha256": "1eef89892220fc040c3a6729bb36670ec45b044e06b9ece5e7ada0e4bf5dda86"
+    }
+  ],
+  "external_source": {
+    "record": "https://hiroshima.repo.nii.ac.jp/records/2000060",
+    "filename": "Oman_GT3A_Supporting_information_original.xlsx",
+    "sha256": "dceaae2ee7e85d233349222447f3c17e50d726b580ee2c629bcc1aed9291ff8b"
+  }
+}

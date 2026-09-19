@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+.venv/
+build/
+dist/
+results/oman/quickcheck/
+results/oman/reproduced/
+data/oman/oman_gt3a_sample_level.csv
+outputs/reproduced_*/
+manuscript_figures/_components*/
+manuscript_figures/contact_sheet.png

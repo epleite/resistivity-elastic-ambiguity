@@ -1,0 +1,63 @@
+{
+  "protocol_id": "phase14e_oman_external_transfer_v1",
+  "status": "frozen_before_outcome_modelling",
+  "date_utc": "2026-08-30",
+  "source_file": "raw/Oman_GT3A_Supporting_information_original.xlsx",
+  "source_sha256": "dceaae2ee7e85d233349222447f3c17e50d726b580ee2c629bcc1aed9291ff8b",
+  "n_source_samples": 94,
+  "unit": "physical_core_sample",
+  "outcome": "porosity_percent",
+  "outer_blocks": 8,
+  "block_rule": "1 + floor(8 * zero_based_depth_rank / 94)",
+  "elastic_predictors": [
+    "wet_vp_geometric_mean_km_s",
+    "wet_vs_geometric_mean_km_s",
+    "bulk_density_g_cm3"
+  ],
+  "primary_electrical_predictor": "log10_r35_geometric_mean_ohm_m",
+  "sensitivity_electrical_predictor": "log10_formation_factor_geometric_mean",
+  "model": "ridge_linear_unpenalized_intercept",
+  "penalty_grid": [0.01, 0.1, 1, 10, 100],
+  "penalty_selection": "lowest_inner_block_mse_largest_penalty_tie_break",
+  "target_transform": "none",
+  "prediction_clipping": "none",
+  "missing_data": "complete_case_no_imputation",
+  "bootstrap": {
+    "unit": "whole_depth_block",
+    "draws": 10000,
+    "seed": 14052026,
+    "interval": "percentile_95"
+  },
+  "permutation": {
+    "within": "geological_sequence",
+    "draws": 999,
+    "seed": 14052027,
+    "full_nested_refit": true,
+    "p_formula": "(1 + count(D_perm >= D_observed)) / 1000"
+  },
+  "primary_gates": {
+    "min_complete_samples": 80,
+    "min_nonempty_outer_blocks": 6,
+    "rmse_ratio_max": 0.9,
+    "rmse_ratio_bootstrap_upper_strict_max": 1.0,
+    "permutation_p_max": 0.05,
+    "mae_ratio_max": 1.0,
+    "large_sequence_min_n": 10,
+    "large_sequence_rmse_ratio_max": 1.25
+  },
+  "pass_label": "E_MECHANISTIC_TRANSFER_GO",
+  "fail_label": "E_NO_TRANSFER_GO",
+  "derived_sensitivity_label": "E_DERIVED_ELECTRICAL_SIGNAL",
+  "forbidden_primary": [
+    "orientation_as_replicate",
+    "random_forest",
+    "boosting",
+    "splines",
+    "interactions",
+    "feature_search",
+    "alternative_salinity_selection",
+    "outcome_transform_search",
+    "posthoc_subgroup_thresholds",
+    "crack_inversion_outputs_as_predictors"
+  ]
+}

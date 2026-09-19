@@ -1,0 +1,43 @@
+name: Publish v1.0.0 release
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    if: github.event.head_commit.message == 'Prepare reproducibility package v1.0.0'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reconstruct verified archives
+        shell: bash
+        run: |
+          cat release_parts/code-part-* > resistivity-elastic-ambiguity-v1.0.0.zip
+          cat release_parts/source-part-* > Leite_GMD_source_v0.2.zip
+          printf '%s  %s\n' '5a4ba15ef8d115537a8889c80681d8fbc37381a2e4a76b24e6a5945766f7cce6' 'resistivity-elastic-ambiguity-v1.0.0.zip' > SHA256SUMS-release.txt
+          printf '%s  %s\n' 'b7ba9b32bb25f064f744b8eaf37c238d7bbab96cee1663cf79476f788b2d2d21' 'Leite_GMD_source_v0.2.zip' >> SHA256SUMS-release.txt
+          sha256sum -c SHA256SUMS-release.txt
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          gh release create v1.0.0 \
+            --target "$GITHUB_SHA" \
+            --title 'v1.0.0 — GMD reproducibility package' \
+            --notes-file .github/release-notes-v1.0.0.md \
+            resistivity-elastic-ambiguity-v1.0.0.zip \
+            Leite_GMD_source_v0.2.zip \
+            SHA256SUMS-release.txt
+      - name: Remove temporary transfer parts from main
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm -r release_parts
+          git commit -m 'Remove temporary release payload'
+          git push origin HEAD:main

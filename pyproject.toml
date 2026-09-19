@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "resistivity-elastic-ambiguity"
+version = "1.0.0"
+description = "Tests of information gain and model error in partially coupled elastic-electrical rock-physics inversion"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Emilson Pereira Leite", email = "emilson@unicamp.br"},
+]
+keywords = ["joint inversion", "rock physics", "resistivity", "porosity"]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "matplotlib>=3.7",
+    "pandas>=2.0",
+    "openpyxl>=3.1",
+    "pillow>=10",
+]
+
+[project.optional-dependencies]
+reports = ["reportlab>=4.0", "pypdf>=4.0"]
+dev = ["pytest>=8.0"]
+
+[project.urls]
+Repository = "https://github.com/epleite/resistivity-elastic-ambiguity"
+Issues = "https://github.com/epleite/resistivity-elastic-ambiguity/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

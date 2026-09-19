@@ -1,0 +1,36 @@
+{
+  "protocol_id": "phase14e_oman_external_transfer_v1",
+  "decision": "E_NO_TRANSFER_GO",
+  "date_utc": "2026-08-30",
+  "primary": {
+    "n": 93,
+    "rmse_elastic": 1.23448995472387,
+    "rmse_joint": 1.1754158507886918,
+    "rmse_ratio": 0.95214695453039,
+    "mae_elastic": 0.8154821826317487,
+    "mae_joint": 0.7537769660592967,
+    "mae_ratio": 0.9243328451722697,
+    "bootstrap_rmse_ratio_l95": 0.8680978728306288,
+    "bootstrap_rmse_ratio_u95": 0.9923745144171887,
+    "permutation_p": 0.001,
+    "permutation_draws": 999,
+    "bootstrap_draws": 10000,
+    "failed_gates": ["rmse_ratio_max_0.90"]
+  },
+  "formation_factor_sensitivity": {
+    "n": 93,
+    "rmse_ratio": 0.9548191188298706,
+    "mae_ratio": 0.9343312098317805,
+    "bootstrap_rmse_ratio_l95": 0.8552043794554324,
+    "bootstrap_rmse_ratio_u95": 1.0005555170664728,
+    "permutation_p": 0.002,
+    "passes": false
+  },
+  "velocity_only_sensitivity": {
+    "rmse_ratio": 0.9287662274127448,
+    "mae_ratio": 0.9313876092239668
+  },
+  "source_sha256": "dceaae2ee7e85d233349222447f3c17e50d726b580ee2c629bcc1aed9291ff8b",
+  "protocol_sha256": "68bae6eceb0f15ae9507413724bc09bfea7c3b814f20646559c83b4b33fd1e84",
+  "interpretation": "independent_but_modest_electrical_signal_not_strong_transfer_confirmation"
+}

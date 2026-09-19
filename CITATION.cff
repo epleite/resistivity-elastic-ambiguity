@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "Please cite the archived software release and the associated paper."
+title: "When does resistivity resolve elastic ambiguity? Reproducibility archive"
+type: software
+version: 1.0.0
+date-released: 2026-09-18
+authors:
+  - family-names: Leite
+    given-names: Emilson Pereira
+    orcid: "https://orcid.org/0000-0003-1691-6243"
+    affiliation: "Department of Geology and Natural Resources, Institute of Geosciences, University of Campinas (UNICAMP), Rua Carlos Gomes 250, 13083–855 Campinas, SP, Brazil"
+    email: "emilson@unicamp.br"
+repository-code: "https://github.com/epleite/resistivity-elastic-ambiguity"
+url: "https://github.com/epleite/resistivity-elastic-ambiguity"
+license: MIT
+abstract: >-
+  Code, frozen synthetic results, publication-figure generation, and the Oman
+  GT3A external control used to test when resistivity improves elastic
+  rock-physics inversion and how the result changes when transport processes
+  are missing from the fitted models.
+keywords:
+  - joint inversion
+  - rock physics
+  - resistivity
+  - porosity
+  - model assessment
+  - uncertainty calibration

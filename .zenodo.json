@@ -1,0 +1,30 @@
+{
+  "title": "When does resistivity resolve elastic ambiguity? Reproducibility archive",
+  "description": "Code, frozen synthetic results, publication-figure generation, and the Oman GT3A external control used to test when resistivity improves elastic rock-physics inversion and how the result changes when transport processes are missing from the fitted models.",
+  "creators": [
+    {
+      "name": "Leite, Emilson Pereira",
+      "affiliation": "Department of Geology and Natural Resources, Institute of Geosciences, University of Campinas (UNICAMP), Rua Carlos Gomes 250, 13083–855 Campinas, SP, Brazil",
+      "orcid": "0000-0003-1691-6243"
+    }
+  ],
+  "license": "mit",
+  "upload_type": "software",
+  "access_right": "open",
+  "version": "1.0.0",
+  "keywords": [
+    "joint inversion",
+    "rock physics",
+    "electrical resistivity",
+    "porosity",
+    "model discrepancy",
+    "uncertainty calibration"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://hiroshima.repo.nii.ac.jp/records/2000060",
+      "relation": "isDerivedFrom",
+      "resource_type": "dataset"
+    }
+  ]
+}
