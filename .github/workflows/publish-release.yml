@@ -52,7 +52,7 @@ jobs:
         run: |
           cat release_parts/source-part-* > Leite_GMD_source_v0.2.zip
           printf '%s  %s\n' '5a4ba15ef8d115537a8889c80681d8fbc37381a2e4a76b24e6a5945766f7cce6' 'resistivity-elastic-ambiguity-v1.0.0.zip' > SHA256SUMS-release.txt
-          printf '%s  %s\n' '521be5c9f0df2f852b03308abb1d359b7830baecf03e11fce9b72e6867a34b16' 'Leite_GMD_source_v0.2.zip' >> SHA256SUMS-release.txt
+          printf '%s  %s\n' '15e76985a32da59eb176c291b2335360afcee3b644494b756165f4ee1bd5f352' 'Leite_GMD_source_v0.2.zip' >> SHA256SUMS-release.txt
           sha256sum -c <(tail -n 1 SHA256SUMS-release.txt)
       - name: Replace source archive and checksums on v1.0.0
         env:
